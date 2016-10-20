@@ -8,7 +8,7 @@ module.exports = {
     'no-before': require('./rules/no-before'),
     'no-html': require('./rules/no-html'),
     'no-prepend': require('./rules/no-prepend'),
-    'no-prependTo': require('./rules/no-prependTo'),
+    'no-prependTo': require('./rules/no-prependTo')
   },
   configs: {
     default: {
@@ -19,7 +19,7 @@ module.exports = {
         "no-before": 2,
         "no-html": 2,
         "no-prepend": 2,
-        "no-prependTo": 2,
+        "no-prependTo": 2
       }
     }
   }
