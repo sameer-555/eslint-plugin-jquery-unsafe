@@ -13,13 +13,13 @@ module.exports = {
   configs: {
     default: {
       rules: {
-        "jquery/no-after": 2,
-        "jquery/no-append": 2,
-        "jquery/no-appendTo": 2,
-        "jquery/no-before": 2,
-        "jquery/no-html": 2,
-        "jquery/no-prepend": 2,
-        "jquery/no-prependTo": 2,
+        "no-after": 2,
+        "no-append": 2,
+        "no-appendTo": 2,
+        "no-before": 2,
+        "no-html": 2,
+        "no-prepend": 2,
+        "no-prependTo": 2,
       }
     }
   }
