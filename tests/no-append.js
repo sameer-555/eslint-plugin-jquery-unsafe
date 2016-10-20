@@ -11,23 +11,25 @@ ruleTester.run('no-append', rule, {
     'append()',
     '[].append()',
     'div.append()',
-    'div.append'
+    'div.append',
+    '$div.append()',
+    '$div.first.append()'
   ],
   invalid: [
     {
-      code: '$("div").append()',
+      code: '$("div").append("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$div.append()',
+      code: '$div.append("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").first().append()',
+      code: '$("div").first().append("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").html($("input").append())',
+      code: '$("div").prepend($("input").append("<script>"))',
       errors: [{message: error, type: 'CallExpression'}]
     }
   ]

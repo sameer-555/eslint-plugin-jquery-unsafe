@@ -11,23 +11,25 @@ ruleTester.run('no-html', rule, {
     'html()',
     '[].html()',
     'div.html()',
-    'div.html'
+    'div.html',
+    '$div.html()',
+    '$div.first.html()'
   ],
   invalid: [
     {
-      code: '$("div").html()',
+      code: '$("div").html("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$div.html()',
+      code: '$div.html("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").first().html()',
+      code: '$("div").first().html("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").append($("input").html())',
+      code: '$("div").append($("input").html("<script>"))',
       errors: [{message: error, type: 'CallExpression'}]
     }
   ]

@@ -11,23 +11,25 @@ ruleTester.run('no-before', rule, {
     'before()',
     '[].before()',
     'div.before()',
-    'div.before'
+    'div.before',
+    '$div.before()',
+    '$div.first.before()'
   ],
   invalid: [
     {
-      code: '$("div").before()',
+      code: '$("div").before("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$div.before()',
+      code: '$div.before("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").first().before()',
+      code: '$("div").first().before("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").append($("input").before())',
+      code: '$("div").append($("input").before("<script>"))',
       errors: [{message: error, type: 'CallExpression'}]
     }
   ]

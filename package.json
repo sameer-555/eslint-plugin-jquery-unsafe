@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-jquery-unsafe",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Disallow jQuery functions with XSS potential.",
   "repository": "cdd/eslint-plugin-jquery-unsafe",
   "license": "MIT",

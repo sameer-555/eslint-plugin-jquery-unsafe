@@ -11,23 +11,25 @@ ruleTester.run('no-prependTo', rule, {
     'prependTo()',
     '[].prependTo()',
     'div.prependTo()',
-    'div.prependTo'
+    'div.prependTo',
+    '$div.prependTo()',
+    '$div.first.prependTo()'
   ],
   invalid: [
     {
-      code: '$("div").prependTo()',
+      code: '$("div").prependTo("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$div.prependTo()',
+      code: '$div.prependTo("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").first().prependTo()',
+      code: '$("div").first().prependTo("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").append($("input").prependTo())',
+      code: '$("div").append($("input").prependTo("<script>"))',
       errors: [{message: error, type: 'CallExpression'}]
     }
   ]

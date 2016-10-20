@@ -11,23 +11,25 @@ ruleTester.run('no-after', rule, {
     'after()',
     '[].after()',
     'div.after()',
-    'div.after'
+    'div.after',
+    '$div.after()',
+    '$div.first.after()'
   ],
   invalid: [
     {
-      code: '$("div").after()',
+      code: '$("div").after("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$div.after()',
+      code: '$div.after("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").first().after()',
+      code: '$("div").first().after("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").append($("input").after())',
+      code: '$("div").append($("input").after("<script>"))',
       errors: [{message: error, type: 'CallExpression'}]
     }
   ]

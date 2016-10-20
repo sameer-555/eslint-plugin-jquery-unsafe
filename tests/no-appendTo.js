@@ -11,23 +11,25 @@ ruleTester.run('no-appendTo', rule, {
     'appendTo()',
     '[].appendTo()',
     'div.appendTo()',
-    'div.appendTo'
+    'div.appendTo',
+    '$div.appendTo()',
+    '$div.first.appendTo()'
   ],
   invalid: [
     {
-      code: '$("div").appendTo()',
+      code: '$("div").appendTo("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$div.appendTo()',
+      code: '$div.appendTo("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").first().appendTo()',
+      code: '$("div").first().appendTo("<script>")',
       errors: [{message: error, type: 'CallExpression'}]
     },
     {
-      code: '$("div").append($("input").appendTo())',
+      code: '$("div").append($("input").appendTo("<script>"))',
       errors: [{message: error, type: 'CallExpression'}]
     }
   ]
