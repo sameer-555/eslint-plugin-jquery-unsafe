@@ -11,10 +11,10 @@
   ],
   "author": "Kelly Joseph Price",
   "contributors": [
-	"David Graham",
-	"Greg Rock",
-	"Martin Vondracek"
-  ]
+    "David Graham",
+    "Greg Rock",
+    "Martin Vondracek"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter dot tests/"
