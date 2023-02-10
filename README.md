@@ -1,5 +1,7 @@
 # eslint-plugin-jquery-unsafe
 
+[![Node.js CI](https://github.com/mvondracek/eslint-plugin-jquery-unsafe/actions/workflows/node.js.yml/badge.svg)](https://github.com/mvondracek/eslint-plugin-jquery-unsafe/actions/workflows/node.js.yml)
+
 Disallow jQuery functions with XSS potential.
 
 > Copied directly from [eslint-plugin-jquery](https://github.com/dgraham/eslint-plugin-jquery).
