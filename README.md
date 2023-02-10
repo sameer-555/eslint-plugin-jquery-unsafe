@@ -33,13 +33,20 @@ Add `jquery-unsafe` to the plugins section of your `.eslintrc` configuration fil
     "jquery-unsafe"
   ],
   "rules": {
+    "jquery-unsafe/no-add": 2,
     "jquery-unsafe/no-after": 2,
     "jquery-unsafe/no-append": 2,
     "jquery-unsafe/no-appendTo": 2,
     "jquery-unsafe/no-before": 2,
     "jquery-unsafe/no-html": 2,
+    "jquery-unsafe/no-insertAfter": 2,
+    "jquery-unsafe/no-insertBefore": 2,
     "jquery-unsafe/no-prepend": 2,
-    "jquery-unsafe/no-prependTo": 2
+    "jquery-unsafe/no-prependTo": 2,
+    "jquery-unsafe/no-replaceWith": 2,
+    "jquery-unsafe/no-wrap": 2,
+    "jquery-unsafe/no-wrapAll": 2,
+    "jquery-unsafe/no-wrapInner": 2
   }
 }
 ```
