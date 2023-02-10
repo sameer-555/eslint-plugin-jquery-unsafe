@@ -2,8 +2,10 @@
 
 Disallow jQuery functions with XSS potential.
 
-Copied directly from [eslint-plugin-jquery](https://github.com/dgraham/eslint-plugin-jquery).
-Forking didn't seem appropriate as the intent of the plugin is different.
+> Copied directly from [eslint-plugin-jquery](https://github.com/dgraham/eslint-plugin-jquery).
+> Forking didn't seem appropriate as the intent of the plugin is different.
+>
+> @kellyjosephprice, https://www.npmjs.com/package/eslint-plugin-jquery-unsafe/v/0.1.0
 
 ## Installation
 
