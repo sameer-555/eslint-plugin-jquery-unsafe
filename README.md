@@ -45,6 +45,7 @@ Add `jquery-unsafe` to the plugins section of your `.eslintrc` configuration fil
     "jquery-unsafe/no-insertBefore": 2,
     "jquery-unsafe/no-prepend": 2,
     "jquery-unsafe/no-prependTo": 2,
+    "jquery-unsafe/no-replaceAll": 2,
     "jquery-unsafe/no-replaceWith": 2,
     "jquery-unsafe/no-wrap": 2,
     "jquery-unsafe/no-wrapAll": 2,
